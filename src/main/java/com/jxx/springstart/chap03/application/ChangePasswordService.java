@@ -2,6 +2,7 @@ package com.jxx.springstart.chap03.application;
 
 import com.jxx.springstart.chap03.domain.Member;
 import com.jxx.springstart.chap03.domain.MemberDao;
+import com.jxx.springstart.chap03.domain.MemoryMemberDao;
 import com.jxx.springstart.chap03.exception.MemberNotFoundException;
 
 public class ChangePasswordService {

@@ -2,6 +2,7 @@ package com.jxx.springstart.chap03;
 
 import com.jxx.springstart.chap03.domain.Member;
 import com.jxx.springstart.chap03.domain.MemberDao;
+import com.jxx.springstart.chap03.domain.MemoryMemberDao;
 
 public class MemberInfoPrinter {
     private MemberDao memberDao;

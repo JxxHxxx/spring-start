@@ -2,20 +2,20 @@ package com.jxx.springstart.chap03.config;
 
 import com.jxx.springstart.chap03.application.ChangePasswordService;
 import com.jxx.springstart.chap03.application.MemberRegisterService;
-import com.jxx.springstart.chap03.domain.MemberDao;
+import com.jxx.springstart.chap03.domain.MemoryMemberDao;
 
 public class Assembler {
-    private MemberDao memberDao;
+    private MemoryMemberDao memberDao;
     private MemberRegisterService registerService;
     private ChangePasswordService changePasswordService;
 
     public Assembler() {
-        memberDao = new MemberDao();
+        memberDao = new MemoryMemberDao();
         registerService = new MemberRegisterService(memberDao);
         changePasswordService = new ChangePasswordService();
         changePasswordService.setMemberDao(memberDao);
     }
-    public MemberDao getMemberDao() {
+    public MemoryMemberDao getMemberDao() {
         return memberDao;
     }
     public MemberRegisterService getRegisterService() {
