@@ -12,7 +12,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Import;
 
 //@Import(TestAppConfig.class)
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.jxx.springstart.chap04_2")
 public class SpringStartApplication {
 
     public static void main(String[] args) {

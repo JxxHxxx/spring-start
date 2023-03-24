@@ -3,6 +3,7 @@ package com.jxx.springstart.chap04.config;
 import com.jxx.springstart.chap04.application.*;
 import com.jxx.springstart.chap04.domain.MemberDao;
 import com.jxx.springstart.chap04.domain.MemoryMemberDao;
+import com.jxx.springstart.chap04.domain.TestEnvMemberDao;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +23,7 @@ public class AppCpx {
     }
 
     @Bean
-//    @Qualifier("printer")
+    @Qualifier("summaryPrinter")
     public MemberSummaryPrinter memberPrinter2() {
         return new MemberSummaryPrinter();
     }

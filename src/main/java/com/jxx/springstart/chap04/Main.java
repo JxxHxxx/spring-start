@@ -19,13 +19,13 @@ public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppCpx.class);
         ChangePasswordService changePasswordService = ac.getBean("changePasswordService", ChangePasswordService.class);
-        MemoryMemberDao memberDao = ac.getBean("memberDao", MemoryMemberDao.class);
+        MemoryMemberDao memoryMemberDao = ac.getBean("memberDao", MemoryMemberDao.class);
 
-        memberDao.insert(new Member("이메일", "1234","자몽", LocalDateTime.now()));
-        Member member = memberDao.selectByEmail("이메일");
+        memoryMemberDao.insert(new Member("이메일", "1234","자몽", LocalDateTime.now()));
+        Member member = memoryMemberDao.selectByEmail("이메일");
 
         changePasswordService.changePassword(member.getEmail(), member.getPassword(), "ABCDE");
-        Member updateMember = memberDao.selectByEmail("이메일");
+        Member updateMember = memoryMemberDao.selectByEmail("이메일");
 
         System.out.println("====================");
         System.out.println("password is ABCDE = " + updateMember.getPassword().equals("ABCDE"));

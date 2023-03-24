@@ -1,6 +1,7 @@
 package com.jxx.springstart.chap04.domain;
 
-import java.util.Collection;
+import
+        java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
